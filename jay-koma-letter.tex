@@ -1,6 +1,11 @@
-\documentclass{scrlttr2}
+\documentclass[foldmarks=false,fromrule=afteraddress,enlargefirstpage=on,fontsize=12pt,fromalign=center,subject=left,parskip=full]{scrlttr2}
      \usepackage[english]{babel}
+     \usepackage{utopia}
      \setkomavar{frombank}{(1234)\,567\,890}
+     \nonfrenchspacing
+     \setkomavar{date}{\flushleft\vspace{-\baselineskip}\today\par}
+     \setkomavar{place }{\flushleft\vspace{-\baselineskip}\today\par} 
+     \setkomafont{backaddress}{\normalsize \usekomafont{fromaddress}}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
@@ -19,7 +24,9 @@
 \tolerance=1000
      \usepackage[AUTO]{babel}
 \usepackage[AUTO]{babel}
-     \setkomavar{firsthead}{}
+\usepackage[english]{babel}
+     
+     \KOMAoption{backaddress}{false}
 \setkomavar{fromemail}{jay@jaydixit.com}
 \LoadLetterOption{DINmtext}
 \setkomavar{fromname}{Jay Dixit}

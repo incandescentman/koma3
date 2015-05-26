@@ -18,9 +18,6 @@
 # NOTE: Change the order of the backletter, use smart quotes and
 #       include backaddress
 
-# Remove the first header
-#+LATEX_HEADER: \setkomavar{firsthead}{}
-
 * To-address of the lovely Juliet                                        :to:
 # NOTE: New lines are not necessary in TO and FROM
 Juliet
