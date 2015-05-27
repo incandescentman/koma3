@@ -1,4 +1,10 @@
 ;; The following lines are always needed.  Choose your own keys.
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode)) ; not needed since Emacs 22.2
+(add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
 (eval-after-load 'ox '(require 'ox-koma-letter))
 (eval-after-load 'ox-latex '(add-to-list 'org-latex-packages-alist '("english" "babel" t) t))
 
@@ -12,7 +18,6 @@
      \\usepackage{utopia}
      \\setkomavar{frombank}{(1234)\\,567\\,890}
      \\nonfrenchspacing
-     \\setkomavar{date}{\\flushleft\\vspace{-\\baselineskip}\\today\\par}
      \\setkomafont{backaddress}{\\normalsize \\usekomafont{fromaddress}}
      \[DEFAULT-PACKAGES]
      \[PACKAGES]
