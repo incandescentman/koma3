@@ -1,8 +1,6 @@
 (TeX-add-style-hook
  "jay-koma-letter"
  (lambda ()
-   (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("scrlttr2" "foldmarks=false" "fromrule=afteraddress" "enlargefirstpage=on" "fontsize=12pt" "fromalign=center" "subject=left" "parskip=full")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("inputenc" "utf8") ("fontenc" "T1") ("ulem" "normalem") ("babel" "English" "AUTO")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
@@ -18,7 +16,6 @@
     "scrlttr2"
     "scrlttr210"
     "babel"
-    "utopia"
     "inputenc"
     "fontenc"
     "fixltx2e"

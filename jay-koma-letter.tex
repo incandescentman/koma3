@@ -1,11 +1,6 @@
-\documentclass[foldmarks=false,fromrule=afteraddress,enlargefirstpage=on,fontsize=12pt,fromalign=center,subject=left,parskip=full]{scrlttr2}
+\documentclass{scrlttr2}
      \usepackage[english]{babel}
-     \usepackage{utopia}
      \setkomavar{frombank}{(1234)\,567\,890}
-     \nonfrenchspacing
-     \setkomavar{date}{\flushleft\vspace{-\baselineskip}\today\par}
-     \setkomavar{place }{\flushleft\vspace{-\baselineskip}\today\par} 
-     \setkomafont{backaddress}{\normalsize \usekomafont{fromaddress}}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
@@ -23,21 +18,22 @@
 \usepackage{hyperref}
 \tolerance=1000
      \usepackage[AUTO]{babel}
-\usepackage[AUTO]{babel}
 \usepackage[english]{babel}
-     
-     \KOMAoption{backaddress}{false}
+\usepackage[AUTO]{babel}
 \setkomavar{fromemail}{jay@jaydixit.com}
-\LoadLetterOption{DINmtext}
+\LoadLetterOption{NF}
 \setkomavar{fromname}{Jay Dixit}
 \setkomavar{fromaddress}{22 Saint Marks Place Apt. D, New York NY 10003}
 \setkomavar{fromphone}{(646) 355-8001}
 \date{July  3, 1580.}
-\setkomavar{place}{New York City}
-\KOMAoption{backaddress}{true}
-\begin{document}
+\setkomavar{place}{}
+\makeatletter
+\renewcommand*{\raggedsignature}{\raggedright}
+\@setplength{backaddrheight}{0pt}
+\@setplength{toaddrhpos}{\dimexpr 1in +\oddsidemargin\relax}
+\makeatother\begin{document}
 
-\KOMAoption{subject}{centered}
+\KOMAoption{subject}{left}
 \setkomavar{subject}{Mis-shapen chaos of well-seeming forms!}
 
 \begin{letter}{%
@@ -59,7 +55,7 @@ That thou consent to marry us to-day. \\
 
 \closing{Best,}
 
-\ps{P.S. "P.S." is not typeset automatically by KOMA-Script \\
+\ps{P.S. ``P.S.'' is not typeset automatically by KOMA-Script \\
 
 
 \noindent P.P.S. This is a feature! \\}

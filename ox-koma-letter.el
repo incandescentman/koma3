@@ -606,7 +606,7 @@ holding export options."
       (when with-email-set
 	(format "\\KOMAoption{fromemail}{%s}\n" (if with-email "true" "false")))))
    ;; Document start
-   "\\begin{document}\n\n"
+   "\\makeatletter\n\\renewcommand*{\\raggedsignature}{\\raggedright}\n\\@setplength{backaddrheight}{0pt}\n\\@setplength{toaddrhpos}{\\dimexpr 1in +\\oddsidemargin\\relax}\n\\makeatother\\begin{document}\n\n"
    ;; Subject
    (let* ((with-subject (plist-get info :with-subject))
 	  (subject-format (cond ((member with-subject '("true" "t" t)) nil)
