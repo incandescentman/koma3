@@ -1,6 +1,9 @@
-\documentclass{scrlttr2}
-     \usepackage[english]{babel}
-     \setkomavar{frombank}{(1234)\,567\,890}
+\documentclass[foldmarks=false,refline=dateleft,fromrule=afteraddress,enlargefirstpage=on,fontsize=12pt,fromalign=center,subject=left,parskip=full]{scrlttr2}
+\usepackage[english]{babel}
+\usepackage{utopia}
+\setkomavar{frombank}{(1234)\,567\,890}
+\nonfrenchspacing
+\setkomafont{backaddress}{\normalsize \usekomafont{fromaddress}}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
@@ -17,25 +20,22 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \tolerance=1000
-     \usepackage[AUTO]{babel}
 \usepackage[english]{babel}
-\usepackage[AUTO]{babel}
+
+\KOMAoption{backaddress}{false}
 \setkomavar{fromemail}{jay@jaydixit.com}
 \LoadLetterOption{DINmtext}
 \setkomavar{fromname}{Jay Dixit}
 \setkomavar{fromaddress}{22 Saint Marks Place Apt. D, New York NY 10003}
 \setkomavar{fromphone}{(646) 355-8001}
-\date{<05-27-2015 Wed>}
-\setkomavar{place}{\flushleft New York City}
+\date{June  3, 2015.}
+\setkomavar{place}{\flushleft }
 \makeatletter
 \renewcommand*{\raggedsignature}{\raggedright}
 \@setplength{backaddrheight}{0pt}
 \@setplength{refvpos}{7cm}
 \@setplength{toaddrhpos}{\dimexpr 1in +\oddsidemargin\relax}
 \makeatother\begin{document}
-
-\KOMAoption{subject}{left}
-\setkomavar{subject}{Mis-shapen chaos of well-seeming forms!}
 
 \begin{letter}{%
 Juliet \\\\
