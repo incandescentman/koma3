@@ -5,16 +5,18 @@
 # NOTE: Check the variable `org-export-date-timestamp-format' for
 # formatting.
 #+BIND: org-export-date-timestamp-format "%B %e, %Y."
+#+PLACE: New York City.
+#+FROM_ADDRESS: 22 Saint Marks Place Apt. D \\ New York NY 10003-8076
+#+PHONE_NUMBER: (555) 555-5555
+#+EMAIL: email@email.com
+
 
 #+AUTHOR: Jay Dixit
 #+CLOSING: Best,
 
 
 #+LCO: DINmtext
-# NOTE: Check the KOMA-Script manual to find a LCO that fits the
-#       envelope standards of your country.
-
-#+OPTIONS: after-closing-order:(ps cc encl) ':nil backaddress:nil :with-phone t :with-email t subject:nil place:nil
+#+OPTIONS: after-closing-order:(ps cc encl) ':nil backaddress:nil :with-phone t :with-email t subject:nil place:t 
 # NOTE: Change the order of the backletter, use smart quotes and
 #       include backaddress
 
