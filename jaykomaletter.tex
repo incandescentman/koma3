@@ -25,17 +25,23 @@
 \KOMAoption{backaddress}{false}
 \LoadLetterOption{DINmtext}
 \setkomavar{fromname}{Jay Dixit}
-\setkomavar{fromaddress}{22 Saint Marks Place Apt. D \\ New York NY 10003-8076}
+\setkomavar{fromaddress}{22 Saint Marks Place Apt. D \\ New York NY 10003-8076 \\ (555) 555-5555 \\ email@email.com \\}
 \setkomavar{fromphone}{(555) 555-5555}
 \setkomavar{fromemail}{email@email.com}
-\date{June  3, 2015.}
-\setkomavar{place}{\flushleft New York City.}
+\date{June  4, 2015.}
+\setkomavar{place}{New York City.}
 \makeatletter
 \renewcommand*{\raggedsignature}{\raggedright}
-\@setplength{backaddrheight}{0pt}
-\@setplength{refvpos}{7cm}
+\@setplength{backaddrheight}{4cm}
+\@setplength{refvpos}{4.8cm}
 \@setplength{toaddrhpos}{\dimexpr 1in +\oddsidemargin\relax}
-\makeatother\begin{document}
+\@setplength{sigbeforevskip}{5\baselineskip}
+\@setplength{subjectbeforevskip}{5.7\baselineskip}
+\@setplength{fromrulewidth}{7cm}
+\makeatother
+\begin{document}
+
+\setkomavar{subject}{Mis-shapen chaos of well-seeming forms!}
 
 \begin{letter}{%
 Juliet \\\\
@@ -56,10 +62,7 @@ That thou consent to marry us to-day. \\
 
 \closing{Best,}
 
-\ps{P.S. "P.S." is not typeset automatically by KOMA-Script \\
-
-
-\noindent P.P.S. This is a feature! \\}
+\ps{P.S. "P.S." is not typeset automatically by KOMA-Script \\}
 \end{letter}
 
 % here we can place random LaTeX code, e.g. including PDFs via the pdfpages package.
