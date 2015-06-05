@@ -1,6 +1,9 @@
 (setq load-path (cons "~/Dropbox/emacs/prelude/elpa/org/lisp" load-path))
 (setq load-path (cons "~/Dropbox/emacs/prelude/elpa/org/contrib/lisp" load-path))
 
+(eval-after-load 'ox '(require 'ox-koma-letter))
+(eval-after-load 'ox-latex '(add-to-list 'org-latex-packages-alist '("english" "babel" t) t))
+
 
 (eval-after-load 'ox '(require 'ox-koma-letter))
 (eval-after-load 'ox-latex '(add-to-list 'org-latex-packages-alist '("english" "babel" t) t))
@@ -16,10 +19,11 @@
      \\nonfrenchspacing
      \\setkomafont{backaddress}{\\normalsize \\usekomafont{fromaddress}}
      \\setkomafont{fromrule}{\\vspace{0.2in}}
-     \\setkomavar{placeseparator}[description ]{\\\\}
+     \\setkomavar{placeseparator}{\\\\}
      \[DEFAULT-PACKAGES]
      \[PACKAGES]
      \[EXTRA]
      \\KOMAoption{backaddress}{false}"))
 
      (setq org-koma-letter-default-class "my-letter")))
+

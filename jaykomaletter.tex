@@ -1,9 +1,11 @@
 \documentclass[foldmarks=false,refline=dateleft,fromrule=afteraddress,enlargefirstpage=on,fontsize=12pt,fromalign=center,subject=left,parskip=full]{scrlttr2}
-\usepackage[english]{babel}
-\usepackage{utopia}
-\setkomavar{frombank}{(1234)\,567\,890}
-\nonfrenchspacing
-\setkomafont{backaddress}{\normalsize \usekomafont{fromaddress}}
+     \usepackage[english]{babel}
+     \usepackage{utopia}
+     \setkomavar{frombank}{(1234)\,567\,890}
+     \nonfrenchspacing
+     \setkomafont{backaddress}{\normalsize \usekomafont{fromaddress}}
+     \setkomafont{fromrule}{\vspace{0.2in}}
+     \setkomavar{placeseparator}{\\}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
@@ -20,16 +22,18 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \tolerance=1000
-\usepackage[english]{babel}
-
-\KOMAoption{backaddress}{false}
+     \usepackage[english]{babel}
+     
+     \KOMAoption{backaddress}{false}
 \LoadLetterOption{DINmtext}
 \setkomavar{fromname}{Jay Dixit}
-\setkomavar{fromaddress}{22 Saint Marks Place Apt. D \\ New York NY 10003-8076 \\ (555) 555-5555 \\ email@email.com \\}
+\setkomavar{fromaddress}{22 Saint Marks Place Apt. D \\ New York NY 10003-8076}
 \setkomavar{fromphone}{(555) 555-5555}
 \setkomavar{fromemail}{email@email.com}
 \date{June  4, 2015.}
 \setkomavar{place}{New York City.}
+\KOMAoption{fromphone}{true}
+\KOMAoption{fromemail}{true}
 \makeatletter
 \renewcommand*{\raggedsignature}{\raggedright}
 \@setplength{backaddrheight}{4cm}
@@ -48,7 +52,7 @@ Juliet \\\\
 House of Capulet \\\\
 Verona \\}
 
-\opening{Dear Juliet,}
+\opening{}
 
 
 Then plainly know my heart's dear love is set \\
