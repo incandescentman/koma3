@@ -1,6 +1,3 @@
-(setq load-path (cons "~/Dropbox/emacs/prelude/elpa/org/lisp" load-path))
-(setq load-path (cons "~/Dropbox/emacs/prelude/elpa/org/contrib/lisp" load-path))
-
 (eval-after-load 'ox '(require 'ox-koma-letter))
 (eval-after-load 'ox-latex '(add-to-list 'org-latex-packages-alist '("english" "babel" t) t))
 
